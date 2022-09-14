@@ -38,7 +38,18 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   smooth_page_indicator: ^1.0.0+2
+  flutter_native_splash: ^2.2.9
+  flutter_launcher_icons: ^0.10.0
 
+flutter_native_splash:
+  color: "#000000"
+  image: "images/logo.png"
+  android: true
+  ios: true
+flutter_icons:
+  image_path: "images/haddiya2.jpg"
+  android: true
+  ios: true
 dev_dependencies:
   flutter_test:
     sdk: flutter
