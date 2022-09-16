@@ -4,7 +4,7 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class Profilepage extends StatelessWidget {
   // const Profilepage({super.key});
-  final List<String> imgList = [
+  final List<String> imgList1 = [
     "images/haddiya1.jpg",
     "images/haddiya2.jpg",
     "images/haddiya3.jpg",
@@ -12,25 +12,48 @@ class Profilepage extends StatelessWidget {
     "images/haddiya5.jpg",
     "images/haddiya6.jpg",
   ];
+  final List<String> imgList2 = [
+    "images/haddiya3.jpg",
+    "images/haddiya5.jpg",
+    "images/haddiya1.jpg",
+    "images/haddiya4.jpg",
+    "images/haddiya2.jpg",
+    "images/haddiya6.jpg",
+  ];
 
   @override
   Widget build(BuildContext context) {
-    List<int> ans = [];
-    int la = imgList.length;
+    List<int> ans1 = [];
+    int la = imgList1.length;
     for (int i = 0; i < la; i += 1) {
-      ans.add(i);
+      ans1.add(i);
+    }
+    List<int> ans2 = [];
+    int l = imgList2.length;
+    for (int i = 0; i < l; i += 1) {
+      ans2.add(i);
     }
     return Scaffold(
-      body: Column(
-        children: [
-          SizedBox(
-            height: 5,
-          ),
-          CrouselSliderAnimation(
-            ans: ans,
-            images: imgList,
-          ),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            CrouselSliderAnimation(
+              ans: ans1,
+              images: imgList1,
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              'Food',
+              style: TextStyle(fontSize: 30),
+            ),
+            CrouselSliderAnimation(
+              ans: ans2,
+              images: imgList2,
+            ),
+          ],
+        ),
       ),
     );
   }
