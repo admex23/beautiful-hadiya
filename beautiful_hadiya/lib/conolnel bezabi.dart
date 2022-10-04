@@ -24,7 +24,7 @@ class _colonelState extends State<Colonel> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Image.asset('images/photo_2022-08-29_15-13-40.jpg'),
+            Image.asset('images/haddiya9.jpg'),
             const SizedBox(
               height: 50,
             ),

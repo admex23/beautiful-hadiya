@@ -9,47 +9,69 @@ class Homepage extends StatelessWidget {
   get children => null;
 
   @override
-  Widget build(BuildContext context) {
-    //var container = Container();
-    return Scaffold(
-      backgroundColor: Color.fromARGB(94, 139, 108, 96),
-      body: Container(
-        padding: const EdgeInsets.only(top: 50, left: 30, right: 30),
-        child: Column(children: [
-          Image.asset('images/taye.jpg'),
-          ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(builder: (BuildContext context) {
-                    return const History();
-                  }),
-                );
-              },
-              child: const Text(
-                  '     ❤️   ❤️             History    ❤️  ❤️       ')),
-          Flexible(
-            child: Container(
-              height: 50,
-              width: 300,
-              margin: const EdgeInsets.only(right: 70, bottom: 150, left: 70),
-              color: Colors.black,
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(builder: (BuildContext context) {
-                      return const Culture();
-                    }),
-                  );
-                },
-                child:
-                    Text('                   ☘️ ☘️ culture ☘️ ☘️             '),
-              ),
-            ),
+  Widget build(BuildContext context) => Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('images/admex.jpg'),
+            fit: BoxFit.cover,
           ),
-        ]),
-      ),
-    );
-  }
+        ),
 
-  container({required Color color}) {}
+        //var container = Container();
+        child: Scaffold(
+          backgroundColor: const Color.fromARGB(94, 139, 108, 96),
+          // ignore: unnecessary_new
+          body: Container(
+            padding: const EdgeInsets.only(top: 250, left: 30, right: 30),
+            child: Column(children: [
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (BuildContext context) {
+                        return const History();
+                      }),
+                    );
+                  },
+                  style: ButtonStyle(
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(250)))),
+                  child: const Text(
+                      '     ❤️   ❤️             History    ❤️  ❤️       ')),
+              const SizedBox(
+                height: 50,
+              ),
+              Flexible(
+                child: Container(
+                  height: 90,
+                  width: 300,
+                  margin:
+                      const EdgeInsets.only(right: 70, bottom: 150, left: 70),
+                  color: Colors.black,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(builder: (BuildContext context) {
+                          return const Culture();
+                        }),
+                      );
+                    },
+                    style: ButtonStyle(
+                        shape:
+                            MaterialStateProperty.all<RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(250)))),
+                    child: const Text(
+                      '                   ☘️ ☘️ culture ☘️ ☘️             ',
+                      style: TextStyle(fontSize: 24),
+                    ),
+                  ),
+                ),
+              ),
+            ]),
+          ),
+        ),
+      );
 }
+
+container({required Color color}) {}

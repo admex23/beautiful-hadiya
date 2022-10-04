@@ -12,7 +12,7 @@ class _BeyeneState extends State<Beyene> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('  history of beyene petros'),
+        title: const Text('  history of haddiya'),
         automaticallyImplyLeading: false,
         leading: IconButton(
           onPressed: () {
@@ -24,7 +24,7 @@ class _BeyeneState extends State<Beyene> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Image.asset('images/beyen.jpg'),
+            Image.asset('images/haddiya23.jpg'),
             const SizedBox(
               height: 50,
             ),

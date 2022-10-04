@@ -13,21 +13,28 @@ class Culture extends StatefulWidget {
 class _CultureState extends State<Culture> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text(' The hadiya greatest people history'),
-        automaticallyImplyLeading: false,
-        leading: IconButton(
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
-          icon: const Icon(Icons.arrow_back_ios),
+    var container = Container(
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage('images/haddiya21.jpg'),
+          fit: BoxFit.cover,
         ),
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Image.asset('images/photo_2022-08-29_15-13-10.jpg'),
+      child: Scaffold(
+        backgroundColor: const Color.fromARGB(94, 139, 108, 96),
+        appBar: AppBar(
+          title: const Text(' The hadiya greatest people of history'),
+          automaticallyImplyLeading: false,
+          leading: IconButton(
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+            icon: const Icon(Icons.arrow_back_ios),
+          ),
+        ),
+        body: SingleChildScrollView(
+          child: Column(children: [
+            Image.asset('images/haddiya24.jpg'),
             const SizedBox(
               height: 50,
             ),
@@ -37,11 +44,11 @@ class _CultureState extends State<Culture> {
             Container(
               margin: const EdgeInsets.all(10.0),
               padding: const EdgeInsets.all(10.0),
-              color: Color.fromARGB(255, 105, 96, 139),
+              color: const Color.fromARGB(255, 105, 96, 139),
               width: double.infinity,
               child: const Center(
                 child: Text(
-                  'worroni niiloobbano bikkina qaannanalle',
+                  'we have beautiful culture',
                   style: TextStyle(
                     color: Color.fromARGB(255, 80, 15, 15),
                   ),
@@ -60,8 +67,12 @@ class _CultureState extends State<Culture> {
                     }),
                   );
                 },
-                child:
-                    const Text('                        Yahode              '),
+                style: ButtonStyle(
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(250)))),
+                child: const Text(
+                    '                        Yaahoode              '),
               ),
             ),
             const SizedBox(
@@ -77,12 +88,17 @@ class _CultureState extends State<Culture> {
                       }),
                     );
                   },
-                  child: const Text('hadiy wogi hurbatuwa gudish ogoraa'),
+                  style: ButtonStyle(
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(250)))),
+                  child: const Text(
+                      'haddiyi hechchi qaaniq huribbaata gudishshi ogorra'),
                 ),
               );
             }),
             const SizedBox(
-              height: 50,
+              height: 15,
             ),
             Builder(builder: (context) {
               return Center(
@@ -94,12 +110,16 @@ class _CultureState extends State<Culture> {
                       }),
                     );
                   },
-                  child: const Text('hadiy wogi hurbatuwa gudish ogoraa'),
+                  style: ButtonStyle(
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(250)))),
+                  child: const Text('serrawana'),
                 ),
               );
             }),
             const SizedBox(
-              height: 50,
+              height: 15,
             ),
             Center(
               child: ElevatedButton(
@@ -110,12 +130,17 @@ class _CultureState extends State<Culture> {
                     }),
                   );
                 },
-                child: const Text('hadiyi idoti woga'),
+                style: ButtonStyle(
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(250)))),
+                child: const Text('haddiyi idooti hechchi qaaniqa'),
               ),
             ),
-          ],
+          ]),
         ),
       ),
     );
+    return container;
   }
 }

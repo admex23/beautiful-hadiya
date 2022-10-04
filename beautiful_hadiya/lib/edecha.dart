@@ -12,7 +12,7 @@ class _EdechaState extends State<Edecha> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('hadiya era changer<yahode> '),
+        title: const Text('hadiya era changer<yaahoode> '),
         automaticallyImplyLeading: false,
         leading: IconButton(
           onPressed: () {
@@ -24,7 +24,7 @@ class _EdechaState extends State<Edecha> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Image.asset('images/taye.jpg'),
+            Image.asset('images/haddiya25.jpg'),
             const SizedBox(
               height: 50,
             ),

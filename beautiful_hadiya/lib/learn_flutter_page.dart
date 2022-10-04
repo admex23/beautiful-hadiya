@@ -13,21 +13,27 @@ class History extends StatefulWidget {
 class _HistoryState extends State<History> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text(' The hadiya greatest people history'),
-        automaticallyImplyLeading: false,
-        leading: IconButton(
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
-          icon: const Icon(Icons.arrow_back_ios),
+    var container = Container(
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage('images/beyen.jpg'),
+          fit: BoxFit.cover,
         ),
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Image.asset('images/taye2.jpg'),
+      child: Scaffold(
+        appBar: AppBar(
+          title: const Text(' The hadiya greatest people of history'),
+          automaticallyImplyLeading: false,
+          leading: IconButton(
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+            icon: const Icon(Icons.arrow_back_ios),
+          ),
+        ),
+        body: SingleChildScrollView(
+          child: Column(children: [
+            Image.asset('images/beyen.jpg'),
             const SizedBox(
               height: 50,
             ),
@@ -37,10 +43,10 @@ class _HistoryState extends State<History> {
             Container(
               margin: const EdgeInsets.all(10.0),
               padding: const EdgeInsets.all(10.0),
-              color: Color.fromARGB(255, 96, 130, 139),
+              color: const Color.fromARGB(255, 96, 130, 139),
               width: double.infinity,
-              child: Center(
-                child: const Text(
+              child: const Center(
+                child: Text(
                   'የሃዲያ ትልልቅ ሰዎች ታሪክ',
                   style: TextStyle(
                     color: Color.fromARGB(255, 255, 255, 255),
@@ -58,6 +64,10 @@ class _HistoryState extends State<History> {
                       }),
                     );
                   },
+                  style: ButtonStyle(
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(250)))),
                   child: const Text('short History of hadiya'),
                 ),
               );
@@ -65,16 +75,22 @@ class _HistoryState extends State<History> {
             const SizedBox(
               height: 30,
             ),
-            Center(
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(builder: (BuildContext context) {
-                      return const Colonel();
-                    }),
-                  );
-                },
-                child: const Text('colonel bezabi petros'),
+            Container(
+              child: Center(
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (BuildContext context) {
+                        return const Colonel();
+                      }),
+                    );
+                  },
+                  style: ButtonStyle(
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(250)))),
+                  child: const Text('colonel bezabi petros'),
+                ),
               ),
             ),
             const SizedBox(
@@ -89,12 +105,17 @@ class _HistoryState extends State<History> {
                     }),
                   );
                 },
+                style: ButtonStyle(
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(250)))),
                 child: const Text('general geja garibo'),
               ),
             ),
-          ],
+          ]),
         ),
       ),
     );
+    return container;
   }
 }

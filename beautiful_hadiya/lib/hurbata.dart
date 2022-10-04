@@ -36,8 +36,8 @@ class _HurbataState extends State<Hurbata> {
               padding: const EdgeInsets.all(10.0),
               color: Colors.blueGrey,
               width: double.infinity,
-              child: Center(
-                child: const Text(
+              child: const Center(
+                child: Text(
                   'worroni niiloobbano bikkina qaannanalle',
                   style: TextStyle(
                     color: Colors.white,
