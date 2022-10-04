@@ -1,3 +1,4 @@
+import 'package:beautiful_hadiya/splash.dart';
 import 'package:flutter/material.dart';
 import 'package:beautiful_hadiya/home.dart';
 import 'package:beautiful_hadiya/profile_page.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(primarySwatch: Colors.brown),
-        home: const Rootpage(title: 'title'));
+        home: const Splash());
   }
 }
 
@@ -30,6 +31,7 @@ class Rootpage extends StatefulWidget {
 
 class _RootpageState extends State<Rootpage> {
   int currentpage = 0;
+  var indexx = 0;
   List<Widget> pages = [const Homepage(), Profilepage(), const Gallerypage()];
   @override
   Widget build(BuildContext context) {
@@ -39,6 +41,7 @@ class _RootpageState extends State<Rootpage> {
       ),
       body: Container(child: pages[currentpage]),
       bottomNavigationBar: NavigationBar(
+          selectedIndex: indexx,
           destinations: const [
             NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
             NavigationDestination(
@@ -47,6 +50,7 @@ class _RootpageState extends State<Rootpage> {
           ],
           onDestinationSelected: (int index) {
             setState(() {
+              indexx = index;
               currentpage = index;
             });
           }),

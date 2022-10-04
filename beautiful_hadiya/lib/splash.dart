@@ -1,10 +1,12 @@
+import 'package:beautiful_hadiya/home.dart';
+import 'package:beautiful_hadiya/main.dart';
 import 'package:flutter/material.dart';
 import 'package:beautiful_hadiya/learn_flutter_page.dart';
 import 'colors.dart';
 import 'culture.dart';
 
-class Homepage extends StatelessWidget {
-  const Homepage({super.key});
+class Splash extends StatelessWidget {
+  const Splash({super.key});
 
   get children => null;
 
@@ -23,7 +25,7 @@ class Homepage extends StatelessWidget {
           // ignore: unnecessary_new
           body: Container(
             padding: const EdgeInsets.only(top: 250, left: 30, right: 30),
-            child: Column(children: [
+            child: Column(mainAxisAlignment: MainAxisAlignment.end, children: [
               SizedBox(
                 height: 100,
               ),
@@ -34,7 +36,9 @@ class Homepage extends StatelessWidget {
                   onPressed: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(builder: (BuildContext context) {
-                        return const History();
+                        return const Rootpage(
+                          title: '',
+                        );
                       }),
                     );
                   },
@@ -44,37 +48,13 @@ class Homepage extends StatelessWidget {
                             borderRadius: BorderRadius.circular(250))),
                   ),
                   child: const Text(
-                    '  ❤️ ❤️  History ❤️ ❤️       ',
+                    ' go to home ',
                     style: TextStyle(fontSize: 24),
                   ),
                 ),
               ),
               const SizedBox(
                 height: 50,
-              ),
-              Container(
-                height: 70,
-                width: 280,
-                // margin:
-                //     const EdgeInsets.only(right: 70, bottom: 150, left: 70),
-                // color: Colors.black,
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(builder: (BuildContext context) {
-                        return const Culture();
-                      }),
-                    );
-                  },
-                  style: ButtonStyle(
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(250)))),
-                  child: const Text(
-                    '      ☘️ ☘️ culture ☘️ ☘️             ',
-                    style: TextStyle(fontSize: 24),
-                  ),
-                ),
               ),
             ]),
           ),

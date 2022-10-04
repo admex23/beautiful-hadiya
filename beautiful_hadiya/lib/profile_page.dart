@@ -107,7 +107,7 @@ class Profilepage extends StatelessWidget {
                 Column(
                   children: [
                     CrouselSliderAnimation(
-                        ans2: ans2, images: imgList2, ans1: const [], ans3: []),
+                        ans1: ans2, images: imgList2, ans2: const [], ans3: []),
                   ],
                 ),
                 const SizedBox(
