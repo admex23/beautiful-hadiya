@@ -12,7 +12,7 @@ class Homepage extends StatelessWidget {
   Widget build(BuildContext context) => Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('images/admex.jpg'),
+            image: AssetImage('images/haddiya01.jpg'),
             fit: BoxFit.cover,
           ),
         ),

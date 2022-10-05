@@ -22,7 +22,7 @@ class _HistoryState extends State<History> {
       ),
       child: Scaffold(
         appBar: AppBar(
-          title: const Text(' The hadiya greatest people of history'),
+          title: const Text(' short story of famous people in the hadiya'),
           automaticallyImplyLeading: false,
           leading: IconButton(
             onPressed: () {
@@ -55,20 +55,25 @@ class _HistoryState extends State<History> {
               ),
             ),
             Builder(builder: (context) {
-              return Center(
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(builder: (BuildContext context) {
-                        return const Beyene();
-                      }),
-                    );
-                  },
-                  style: ButtonStyle(
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(250)))),
-                  child: const Text('short History of hadiya'),
+              return SizedBox(
+                height: 60,
+                width: 400,
+                child: Center(
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(builder: (BuildContext context) {
+                          return const Beyene();
+                        }),
+                      );
+                    },
+                    style: ButtonStyle(
+                        shape:
+                            MaterialStateProperty.all<RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(250)))),
+                    child: const Text('short History of hadiya'),
+                  ),
                 ),
               );
             }),
@@ -76,6 +81,7 @@ class _HistoryState extends State<History> {
               height: 30,
             ),
             Container(
+              height: 40,
               child: Center(
                 child: ElevatedButton(
                   onPressed: () {
@@ -96,20 +102,23 @@ class _HistoryState extends State<History> {
             const SizedBox(
               height: 30,
             ),
-            Center(
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(builder: (BuildContext context) {
-                      return const Geja();
-                    }),
-                  );
-                },
-                style: ButtonStyle(
-                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(250)))),
-                child: const Text('general geja garibo'),
+            SizedBox(
+              height: 40,
+              child: Center(
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (BuildContext context) {
+                        return const Geja();
+                      }),
+                    );
+                  },
+                  style: ButtonStyle(
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(250)))),
+                  child: const Text('general geja garibo'),
+                ),
               ),
             ),
           ]),

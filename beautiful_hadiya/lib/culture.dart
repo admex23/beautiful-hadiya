@@ -58,33 +58,15 @@ class _CultureState extends State<Culture> {
             const SizedBox(
               height: 50,
             ),
-            Center(
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(builder: (BuildContext context) {
-                      return const Edecha();
-                    }),
-                  );
-                },
-                style: ButtonStyle(
-                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(250)))),
-                child: const Text(
-                    '                        Yaahoode              '),
-              ),
-            ),
-            const SizedBox(
-              height: 15,
-            ),
-            Builder(builder: (context) {
-              return Center(
+            SizedBox(
+              height: 60,
+              width: 400,
+              child: Center(
                 child: ElevatedButton(
                   onPressed: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(builder: (BuildContext context) {
-                        return const Hurbata();
+                        return const Edecha();
                       }),
                     );
                   },
@@ -93,7 +75,41 @@ class _CultureState extends State<Culture> {
                           RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(250)))),
                   child: const Text(
-                      'haddiyi hechchi qaaniq huribbaata gudishshi ogorra'),
+                    '                        Yaahoode              ',
+                    style: TextStyle(fontSize: 29),
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+            Builder(builder: (context) {
+              return SizedBox(
+                child: SizedBox(
+                  height: 60,
+                  width: 600,
+                  child: Center(
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(builder: (BuildContext context) {
+                            return const Hurbata();
+                          }),
+                        );
+                      },
+                      style: ButtonStyle(
+                          shape:
+                              MaterialStateProperty.all<RoundedRectangleBorder>(
+                                  RoundedRectangleBorder(
+                                      borderRadius:
+                                          BorderRadius.circular(250)))),
+                      child: const Text(
+                        'The culture Foods of hadiya',
+                        style: TextStyle(fontSize: 27),
+                      ),
+                    ),
+                  ),
                 ),
               );
             }),
@@ -101,12 +117,43 @@ class _CultureState extends State<Culture> {
               height: 15,
             ),
             Builder(builder: (context) {
-              return Center(
+              return SizedBox(
+                height: 60,
+                width: 400,
+                child: Center(
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(builder: (BuildContext context) {
+                          return const Hurbata();
+                        }),
+                      );
+                    },
+                    style: ButtonStyle(
+                        shape:
+                            MaterialStateProperty.all<RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(250)))),
+                    child: const Text(
+                      'serrawana',
+                      style: TextStyle(fontSize: 29),
+                    ),
+                  ),
+                ),
+              );
+            }),
+            const SizedBox(
+              height: 15,
+            ),
+            SizedBox(
+              height: 60,
+              width: 400,
+              child: Center(
                 child: ElevatedButton(
                   onPressed: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(builder: (BuildContext context) {
-                        return const Hurbata();
+                        return const Idota();
                       }),
                     );
                   },
@@ -114,27 +161,11 @@ class _CultureState extends State<Culture> {
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(250)))),
-                  child: const Text('serrawana'),
+                  child: const Text(
+                    'haddiyi idooti hechchi qaaniqa',
+                    style: TextStyle(fontSize: 29),
+                  ),
                 ),
-              );
-            }),
-            const SizedBox(
-              height: 15,
-            ),
-            Center(
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(builder: (BuildContext context) {
-                      return const Idota();
-                    }),
-                  );
-                },
-                style: ButtonStyle(
-                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(250)))),
-                child: const Text('haddiyi idooti hechchi qaaniqa'),
               ),
             ),
           ]),

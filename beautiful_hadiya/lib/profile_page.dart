@@ -5,11 +5,11 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 class Profilepage extends StatelessWidget {
   // const Profilepage({super.key});
   final List<String> imgList0 = [
-    "images/haddiya6.jpg",
-    "images/haddiya2.jpg",
-    "images/haddiya3.jpg",
-    "images/haddiya4.jpg",
-    "images/haddiya5.jpg",
+    "images/haddiya03.jpg",
+    "images/haddiya04.jpg",
+    "images/haddiya06.jpg",
+    "images/haddiya05.jpg",
+    "images/haddiya10.jpg",
     "images/haddiya1.jpg",
   ];
   final List<String> imgList1 = [
@@ -17,30 +17,30 @@ class Profilepage extends StatelessWidget {
     "images/haddiya13.jpg",
     "images/haddiya24.jpg",
     "images/haddiya4.jpg",
-    "images/haddiya5.jpg",
-    "images/haddiya6.jpg",
+    "images/haddiya07.jpg",
+    "images/haddiya08.jpg",
   ];
   final List<String> imgList2 = [
-    "images/haddiya1.jpg",
-    "images/haddiya2.jpg",
-    "images/haddiya3.jpg",
-    "images/haddiya4.jpg",
-    "images/haddiya5.jpg",
-    "images/haddiya6.jpg",
+    "images/haddiya013.jpg",
+    "images/haddiya09.jpg",
+    "images/haddiya010.jpg",
+    "images/haddiya011.jpg",
+    "images/haddiya012.jpg",
+    "images/haddiya014.jpg",
   ];
   final List<String> imgList3 = [
-    "images/haddiya1.jpg",
-    "images/haddiya2.jpg",
+    "images/haddiya9.jpg",
+    "images/uu.jpg",
     "images/haddiya3.jpg",
     "images/haddiya4.jpg",
     "images/haddiya5.jpg",
-    "images/haddiya6.jpg",
+    "images/haddiya8.jpg",
   ];
   final List<String> imgList4 = [
     "images/haddiya12.jpg",
     "images/haddiya16.jpg",
     "images/haddiya19.jpg",
-    "images/haddiya4.jpg",
+    "images/haddiya18.jpg",
     "images/haddiya5.jpg",
     "images/haddiya6.jpg",
   ];

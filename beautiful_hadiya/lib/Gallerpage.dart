@@ -7,50 +7,30 @@ class Gallerypage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 139, 117, 96),
-      body: OverflowBox(
-        maxWidth: MediaQuery.of(context).size.width,
-        child: Container(
-          padding: const EdgeInsets.only(top: 25, left: 15),
-          child: Container(
-            padding: const EdgeInsets.only(top: 57, left: 27),
-            child: Column(
-              children: [
+        backgroundColor: Color.fromARGB(255, 139, 117, 96),
+        body: OverflowBox(
+            maxWidth: MediaQuery.of(context).size.width,
+            child: Container(
+              padding: const EdgeInsets.only(top: 57, left: 27),
+              child: Column(children: [
+                Image.asset('images/haddiya0.jpg'),
+                const SizedBox(
+                  height: 40,
+                ),
                 Row(
                   children: const [
                     Text(
-                      'adimasu edilu',
+                      ' Developer :- adimasu edilu'
+                      ''
+                      '',
                       style: TextStyle(
+                        fontSize: 30,
                         color: Colors.white,
                       ),
                     ),
                   ],
                 ),
-                const SizedBox(
-                  height: 20,
-                ),
-                const SingleChildScrollView(),
-                Container(
-                  height: 300,
-                  width: MediaQuery.of(context).size.width,
-                  margin: const EdgeInsets.only(right: 10, bottom: 40, left: 0),
-                  decoration: BoxDecoration(
-                    color: Colors.blueAccent,
-                    borderRadius: BorderRadius.circular(20),
-                    image: const DecorationImage(
-                      image: AssetImage('assets/1661081829824.jpg'),
-                      //fit: BoxFit.fill),
-                    ),
-                  ),
-                  child: Row(
-                    children: [Image.asset('assets/taye2.jpg')],
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
+              ]),
+            )));
   }
 }

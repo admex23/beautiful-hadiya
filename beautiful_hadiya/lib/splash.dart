@@ -12,9 +12,9 @@ class Splash extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('images/admex.jpg'),
+            image: AssetImage('images/haddiya12.jpg'),
             fit: BoxFit.cover,
           ),
         ),
@@ -26,7 +26,17 @@ class Splash extends StatelessWidget {
           body: Container(
             padding: const EdgeInsets.only(top: 250, left: 30, right: 30),
             child: Column(mainAxisAlignment: MainAxisAlignment.end, children: [
-              SizedBox(
+              const Text(
+                'welcome to beautiful_hadiya                   ',
+                style: TextStyle(
+                  fontSize: 57,
+                  color: Colors.white,
+                ),
+              ),
+              const SizedBox(
+                height: 140,
+              ),
+              const SizedBox(
                 height: 100,
               ),
               SizedBox(
@@ -48,8 +58,8 @@ class Splash extends StatelessWidget {
                             borderRadius: BorderRadius.circular(250))),
                   ),
                   child: const Text(
-                    ' go to home ',
-                    style: TextStyle(fontSize: 24),
+                    ' start ➡️➡️➡️',
+                    style: TextStyle(fontSize: 34),
                   ),
                 ),
               ),
